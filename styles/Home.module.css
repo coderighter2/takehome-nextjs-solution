@@ -1,15 +1,21 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.nomineecontainer {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: '100%';
+  background-color: #0d2436;
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -71,30 +77,43 @@
 
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  width: 100%;
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
+  /* margin: 1rem; */
+  padding: 1.5rem 1.5rem 5px 1.5rem;
   text-align: left;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #009b86;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+  width: 33.3333%;
+  background-color: #009b86;
+  text-align: center;
+  margin-right: 10px;
+  max-width: 300px;
+  margin-bottom: 10px;
 }
-
+/* .card:last-child {
+  margin-right: 0;
+} */
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #cccccc;
+  border-color: #34ac9c;
+  background-color: #34ac9c;
+}
+.selectedCard {
+  color: #cccccc;
+  border-color: #34ac9c;
+  background-color: #34ac9c;
 }
 
 .card h2 {
@@ -113,9 +132,67 @@
   margin-left: 0.5rem;
 }
 
+@media (max-width: 960px) {
+  .card {
+    flex: 1;
+    width: initial;
+    max-width: initial;
+  }
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .card {
+    width: 100%;
+  }
+}
+.heading {
+  background-color: #666666;
+  color: #fff;
+  padding: 3px 10px 3px 10px;
+}
+.heading:hover {
+  color: #cccccc;
+}
+.cardTitle {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cardImgTop {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.button {
+  background-color: #666666;
+  padding: 15px 25px;
+  box-shadow: none;
+  border: none;
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 5px;
+}
+.card:hover .button {
+  background-color: #ada0a0;
+}
+.selectedCard .button {
+  background-color: #ada0a0;
+}
+.modalBody {
+  display: flex;
+  align-items: center;
+}
+.modalBody h2 {
+  flex: 1;
+  text-align: center;
+}
+.closeIcon {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bolder;
 }

@@ -106,3 +106,7 @@ curl -X GET \
 
 > **Good luck and if you have any questions, please reach out to us!**
 
+## TEST-INSTRUCTIONS
+---
+1) Select items in each categories.
+2) A modal appears, you can see your selection at there.

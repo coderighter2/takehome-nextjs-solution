@@ -1,0 +1,25 @@
+.heading {
+  background-color: #666666;
+  color: #fff;
+  padding: 3px 10px 3px 10px;
+}
+.heading:hover {
+  color: #cccccc;
+}
+.cardContainer {
+  background-color: #009b86;
+}
+.cardContainer:hover {
+  background-color: #34ac9c;
+}
+.cardImgTop {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.cardTitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
